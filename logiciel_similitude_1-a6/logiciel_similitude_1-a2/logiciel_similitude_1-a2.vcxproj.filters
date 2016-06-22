@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\Interface MFC">
+      <UniqueIdentifier>{e4f2cfb1-2833-4d82-a48a-2f5b0633ee00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Core">
+      <UniqueIdentifier>{cb0baf6e-bb00-4c46-a99d-297097b9d30b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Interface MFC">
+      <UniqueIdentifier>{7ed79f2a-5a74-4bcc-b796-9a9da3d4b422}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Core">
+      <UniqueIdentifier>{24673c11-b312-44b4-b1e1-ad41d276a622}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Automatisation Excel">
+      <UniqueIdentifier>{19ee72c1-f32c-498b-b429-1b82435db02f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Graphique">
+      <UniqueIdentifier>{40eb1926-29de-4283-b0d8-186b4a07596a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Graphique">
+      <UniqueIdentifier>{62256192-3db4-4262-b0c0-0632304117ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="logiciel_similitude_1-a2.reg" />
+    <None Include="res\logiciel_similitude_1a2.rc2">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="res\logiciel_similitude_1-a2Doc.ico">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="res\logiciel_similitude_1-a2.ico">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="res\InterfaceSimilitudeView.ico">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="res\AffChartsView.ico">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="res\SaisieEssaisView.ico">
+      <Filter>Fichiers sources</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="res\icone.ico">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultatSimilitude.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocoles_OLEDB_EXCEL.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Essais.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Donnes.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="BDDEssais.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="AffChartsView.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceSimilitudeView.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="logiciel_similitude_1-a2.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="logiciel_similitude_1-a2Doc.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="logiciel_similitude_1-a2View.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="SaisieEssaisView.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CApplication.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorksheets.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CChart.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CChartFormat.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CCharts.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CChartTitle.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CFont0.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CRange.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CSeries.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CSeriesCollection.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CTrendline.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CTrendlines.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorkbook.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorkbooks.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorksheet.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorksheetFunction.h">
+      <Filter>Fichiers d%27en-tête\Automatisation Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Fichiers d%27en-tête\Graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphSeries.h">
+      <Filter>Fichiers d%27en-tête\Graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphDataColor.h">
+      <Filter>Fichiers d%27en-tête\Graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphDataSet.h">
+      <Filter>Fichiers d%27en-tête\Graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphLegend.h">
+      <Filter>Fichiers d%27en-tête\Graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphLegendSet.h">
+      <Filter>Fichiers d%27en-tête\Graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphPieLabel.h">
+      <Filter>Fichiers d%27en-tête\Graphique</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocole_Automation_EXCEL.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="OLEDBExcel.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogModifBDD.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogRefDejaPresente.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockMesure.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="FormatExcel.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogSelectionFormat.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogAffichageCourbeOriginal.h">
+      <Filter>Fichiers d%27en-tête\Interface MFC</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AffChartsView.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="InterfaceSimilitudeView.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="logiciel_similitude_1-a2View.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="SaisieEssaisView.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="logiciel_similitude_1-a2Doc.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="logiciel_similitude_1-a2.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="BDDEssais.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Donnes.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Essais.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocoles_OLEDB_EXCEL.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultatSimilitude.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="Graph.cpp">
+      <Filter>Fichiers sources\Graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphSeries.cpp">
+      <Filter>Fichiers sources\Graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphDataColor.cpp">
+      <Filter>Fichiers sources\Graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphDataSet.cpp">
+      <Filter>Fichiers sources\Graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphLegend.cpp">
+      <Filter>Fichiers sources\Graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphLegendSet.cpp">
+      <Filter>Fichiers sources\Graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphPieLabel.cpp">
+      <Filter>Fichiers sources\Graphique</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocole_Automation_EXCEL.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OLEDBExcel.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogModifBDD.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogRefDejaPresente.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockMesure.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatExcel.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogSelectionFormat.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogAffichageCourbeOriginal.cpp">
+      <Filter>Fichiers sources\Interface MFC</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="logiciel_similitude_1a2.idl">
+      <Filter>Fichiers sources</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="logiciel_similitude_1-a2.rc">
+      <Filter>Fichiers de ressources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

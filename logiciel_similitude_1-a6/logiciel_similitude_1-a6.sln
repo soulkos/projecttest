@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logiciel_similitude_1-a6", "logiciel_similitude_1-a2\logiciel_similitude_1-a2.vcxproj", "{CDA7D514-A021-4DB1-A70E-E93A63712406}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{210C432C-C846-4FF2-8026-31CCA1ED79B5}"
+	ProjectSection(SolutionItems) = preProject
+		logiciel_similitude_1-a5.vsd = logiciel_similitude_1-a5.vsd
+		logiciel_similitude_1-a6.vsd = logiciel_similitude_1-a6.vsd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		test|Win32 = test|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDA7D514-A021-4DB1-A70E-E93A63712406}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CDA7D514-A021-4DB1-A70E-E93A63712406}.Debug|Win32.Build.0 = Debug|Win32
+		{CDA7D514-A021-4DB1-A70E-E93A63712406}.Release|Win32.ActiveCfg = Release|Win32
+		{CDA7D514-A021-4DB1-A70E-E93A63712406}.Release|Win32.Build.0 = Release|Win32
+		{CDA7D514-A021-4DB1-A70E-E93A63712406}.test|Win32.ActiveCfg = test|Win32
+		{CDA7D514-A021-4DB1-A70E-E93A63712406}.test|Win32.Build.0 = test|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

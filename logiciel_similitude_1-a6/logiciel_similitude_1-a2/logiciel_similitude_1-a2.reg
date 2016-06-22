@@ -1,0 +1,22 @@
+REGEDIT
+; Ce fichier .REG peut être utilisé par votre programme d'installation.
+;   Si aucun programme d'installation n'est disponible, les entrées suivantes sont
+;   automatiquement inscrites dans votre InitInstance via un appel à
+;   CWinApp::RegisterShellFileTypes et à COleObjectFactory::UpdateRegistryAll.
+
+HKEY_CLASSES_ROOT\.sauvegarde_simi = logicielsimilitude1a2.Document
+HKEY_CLASSES_ROOT\logicielsimilitude1a2.Document\shell\open\command = logiciel_similitude_1-a2.EXE %1
+HKEY_CLASSES_ROOT\logicielsimilitude1a2.Document\shell\open\ddeexec = [open("%1")]
+HKEY_CLASSES_ROOT\logicielsimilitude1a2.Document\shell\open\ddeexec\application = logiciel_similitude_1-a2
+    ; remarque : l'application est optionnelle
+    ;  (par défaut, prend le nom d'application spécifié dans "command")
+
+HKEY_CLASSES_ROOT\logicielsimilitude1a2.Document = logiciel_similitude_1-a2.Document
+
+
+HKEY_CLASSES_ROOT\logicielsimilitude1a2.Document\CLSID = {F6CFA656-0768-42B0-A9B6-10FC5D4083A2}
+
+HKEY_CLASSES_ROOT\CLSID\{F6CFA656-0768-42B0-A9B6-10FC5D4083A2} = logiciel_similitude_1-a2.Document
+HKEY_CLASSES_ROOT\CLSID\{F6CFA656-0768-42B0-A9B6-10FC5D4083A2}\ProgId = logicielsimilitude1a2.Document
+
+HKEY_CLASSES_ROOT\CLSID\{F6CFA656-0768-42B0-A9B6-10FC5D4083A2}\LocalServer32 = logiciel_similitude_1-a2.EXE

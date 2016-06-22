@@ -1,0 +1,78 @@
+// logiciel_similitude_1a2.idl : source de la bibliothèque de types pour logiciel_similitude_1-a2.exe
+
+// Ce fichier va être traité par le compilateur MIDL pour générer la
+// bibliothèque de types (logiciel_similitude_1a2.tlb).
+
+#include "olectl.h"
+[ uuid(B71CA0F0-F146-4220-A463-035ACB0A68AB), version(1.0) ]
+library logiciel_similitude_1a2
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Interface de dispatch principale pour Clogiciel_similitude_1a2Doc
+	
+	[ uuid(3B3739B3-C6BE-4B05-94F5-382B0C141D1B) ]
+	dispinterface Ilogiciel_similitude_1a2
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  Informations sur la classe Clogiciel_similitude_1a2Doc
+	
+	[ uuid(F6CFA656-0768-42B0-A9B6-10FC5D4083A2) ]
+	coclass Clogiciel_similitude_1a2Doc
+	{
+		[default] dispinterface Ilogiciel_similitude_1a2;
+	};
+	//  Interface de dispatch principale pour SaisieEssaisView
+		
+	[ uuid(8FB47E05-3681-4802-A270-AB91240EF169) ]
+	dispinterface ISaisieEssaisView
+	{
+		properties:
+		methods:
+	};
+
+	//  Informations de classe pour SaisieEssaisView
+
+	[ uuid(93A9B5B3-949C-48F1-A88A-3FBBA6A286D6) ]
+	coclass SaisieEssaisView
+	{
+		[default] dispinterface ISaisieEssaisView;
+	};
+	//  Interface de dispatch principale pour InterfaceSimilitudeView
+		
+	[ uuid(D23D4262-3148-4E58-8EE5-2D85040B0877) ]
+	dispinterface IInterfaceSimilitudeView
+	{
+		properties:
+		methods:
+	};
+
+	//  Informations de classe pour InterfaceSimilitudeView
+
+	[ uuid(700C1834-64EB-4668-BF0D-AF93E57255B1) ]
+	coclass InterfaceSimilitudeView
+	{
+		[default] dispinterface IInterfaceSimilitudeView;
+	};
+	//  Interface de dispatch principale pour AffChartsView
+		
+	[ uuid(F2E4D3F7-0ED5-4E2C-A516-02E3A87C5D27) ]
+	dispinterface IAffChartsView
+	{
+		properties:
+		methods:
+	};
+
+	//  Informations de classe pour AffChartsView
+
+	[ uuid(D809A7D1-876A-4296-A6ED-551EE3DA9025) ]
+	coclass AffChartsView
+	{
+		[default] dispinterface IAffChartsView;
+	};
+};
