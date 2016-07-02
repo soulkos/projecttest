@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="csstransforms csstransforms3d csstransitions" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+	
+	<title>NVIDIA GameWorks NvGamepad Setup Guide</title>
+	<meta name="description" content="NVIDIA GameWorks NvGamepad Setup Guide" />
+
+	<!-- CSS files -->
+    <link href="./css/application.css" rel="stylesheet" type="text/css" />
+    <link href="./css/styleguide.css" rel="stylesheet" type="text/css" />
+	<!--<link rel="stylesheet" type="text/css" href="sdk_samples.css" />-->
+	<!-- scripts to include -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/jquery.fitvids.js"></script>
+    <script src="./js/jquery.colorbox.js"></script>
+    <script src="./js/jquery.isotope.js"></script>
+    <script src="./js/jquery.sidr.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/application.js"></script>
+    <script src="./js/prettify.js"></script>
+</head>
+
+<body style="">
+
+<!--Navbar-->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+	<div class="navbar-header" style="">
+	  <!--<button class="navbar-toggle" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>-->
+	  <div class="logo-header">
+		<a class="navbar-brand logo" href="http://developer.nvidia.com/gameworks"><img alt="NVidia Gameworks" height="21" src="./images/developerzone_gameworks_logo.png" usemap="#logo-header" width="245"></a>
+	  </div>
+	</div>
+  </div>
+</nav>
+
+<!-- main body block -->
+<div id="content" class="container">
+
+<div class="row">
+ <div class="col-md-8">
+	<div class="page-header">
+		<h1>NVIDIA GameWorks NvGamepad Setup Guide</h1>
+	</div>
+	<p class="lead">This guide will help you with the setup of your host machine in order to properly build NvGamepad and run the sample.</p>
+	<p>Please ensure your system meets the <a href="gp_prereq.htm">NvGamepad Prerequisites</a> before proceeding further.</p>
+	
+	<h2>Installing and Building on Windows Host</h2>
+	<p>This section will walk you through the setup of NvGamepad and the sample on a Windows development PC, for Android and Windows build targets.</p>
+
+	<h3>Targeting Windows Host</h3>
+	<ol>
+		<li>Unzip the pack to a directory on the Windows Host PC.  We will call this directory <code>NVGAMEPAD_ROOT</code></li>
+		<li>Launch Visual Studio 2010 or 2012</li>
+		<li>Open the sample project file: <code>{NVGAMEPAD_ROOT}/samples/build/vs201[0,2]win32/GamepadSample.sln</code></li>
+		<li>Build the solution as release or debug</li>
+		<li>The resulting apps will be placed in <code>{NVGAMEPAD_ROOT}/samples/bin/vs201[0,2]x86/</code></li>
+	</ol>
+	<h5>Common Build and Runtime Errors</h5>
+	<ul>
+		<li><p>On Windows 7, running some of the samples may show a dialog indicating that <code>XINPUT1_4.DLL</code> could not be found</p>
+			<p>This can generally be solved as follows:</p>
+			<ol>
+				<li>Right-click the failing sample's icon in the Visual Studio Solution Explorer</li>
+				<li>Click "Properties"</li>
+				<li>Click "Linker"</li>
+				<li>Click "Input"</li>
+				<li>Find <code>xinput.lib</code> in the list</li>
+				<li>Replace <code>xinput.lib</code> with <code>xinput9_1_0.lib</code></li>
+				<li>Rebuild the sample</li>
+			</ol>
+		</li>
+	</ul>
+	<h3>Targeting Android Device</h3>
+	<ol>
+		<li>Unzip the samples pack to a directory on the Windows Host PC.  We will call this directory <code>NVGAMEPAD_ROOT</code></li>
+		<li>If you haven't already, download and install the <a href="http://developer.nvidia.com/tadp">Tegra Android Development Pack</a> (TADP) for Windows.  Be sure to include NVIDIA Nsight Tegra, Visual Studio Edition as an installed component.</li>
+		<li>Launch Visual Studio 2010 or 2012</li>
+		<li>Open the sample project file: <code>{NVGAMEPAD_ROOT}/samples/build/vs2010android/GamepadSample.sln</code> (only VS2010 project files are included for Android, but they will open with warnings in VS2012)</li>
+		<li>Build the solution as release or debug</li>
+		<li>The resulting app APK will be placed in <code>{NVGAMEPAD_ROOT}/samples/bin/Tegra-Android/</code></li>
+	</ol>
+	<h5>Common Android Build Errors</h5>
+	<ul>
+		<li><p>An error similar to:</p>
+			<div class="alert alert-warning">
+			<tt class="small">
+			BUILD FAILED<br/>C:\NVPACK\android-sdk-windows\tools\ant\build.xml:542: Unable to resolve project target 'android-14'
+			</tt>
+			</div>
+			<p>Can be solved as follows:
+			<ol>
+				<li>Run <code>{NVPACK}/android-sdk-windows/SDKManager.exe</code></li>
+				<li>Click "deselect all"</li>
+				<li>Find "Android 4.0 (API14)"</li>
+				<li>Check "SDK Platform"</li>
+				<li>Click "Install packages"</li>
+				<li>Follow the steps to accept the license and install the package</li>
+			</ol>
+			</p>
+		</li>
+		<li><p>The error:</p>
+			<div class="alert alert-warning">
+			<tt class="small">
+			[dx] Could not create the Java virtual machine.<br/>
+			[dx] Error occurred during initialization of VM<br/>
+			[dx] Could not reserve enough space for object heap
+			</tt>
+			</div>
+			<p>Can be solved as follows:
+			<ol>
+				<li>Edit <code>{NVPACK}\android-sdk-windows\build-tools\{each version}\dx.bat</code></li>
+				<li>Find the line:<br/><code>set defaultMx=-Xmx1024M</code><br/>And change the 1024 to 512, like:<br/><code>set defaultMx=-Xmx512M</code></li>
+				<li>Save and exit</li>
+				<li>Restart Visual Studio</li>
+				<li>Rebuild</li>
+			</ol>
+			</p>
+		</li>
+	</ul>
+
+ </div> <!--col-md-8-->
+ <div class="col-md-4"></div>
+</div> <!--row-->
+
+</div> <!--content-->
+<!-- footer block-->
+<div id="footer" class="container">
+	<div class="seperator"></div>
+	<div class="seperator"></div>
+	<footer>
+		<div class="row">
+			<div class="text-center">&copy;2014 NVIDIA Corporation.</div>
+			<div class="seperator"></div>
+		</div>
+	</footer>
+</div> <!--footer-->
+
+</body>
+</html>

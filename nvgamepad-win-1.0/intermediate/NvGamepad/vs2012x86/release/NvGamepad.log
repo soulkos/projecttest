@@ -1,0 +1,5 @@
+﻿cl : Ligne de commande warning D9025: substitution de '/W1' par '/W4'
+  NvGamepadAndroid.cpp
+  NvGamepadXInput.cpp
+  Génération de code en cours...
+  NvGamepad.vcxproj -> C:\Users\Louis\Downloads\nvgamepad-win-1.0\nvgamepad-win-1.0\build\vs2012win32\./../../lib/vs2012x86\libNvGamepadD.lib

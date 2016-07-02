@@ -1,0 +1,4 @@
+﻿cl : Ligne de commande warning D9025: substitution de '/W1' par '/W4'
+  main.cpp
+  GamepadSample.vcxproj -> C:\Users\Louis\Downloads\nvgamepad-win-1.0\nvgamepad-win-1.0\samples\build\vs2012win32\./../../bin/vs2012x86\GamepadSampleD.exe
+  GamepadSample.vcxproj -> ./../../bin/vs2012x86\/GamepadSampleD.exe.pdb (Full PDB)

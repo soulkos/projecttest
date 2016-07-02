@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="csstransforms csstransforms3d csstransitions" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+	
+<title>NVIDIA GameWorks Cross-platform Gamepad Library</title>
+<meta name="description" content="NVIDIA GameWorks Cross-platform Gamepad Library" />
+
+	<!-- CSS files -->
+    <link href="./css/application.css" rel="stylesheet" type="text/css" />
+    <link href="./css/styleguide.css" rel="stylesheet" type="text/css" />
+	<!--<link rel="stylesheet" type="text/css" href="sdk_samples.css" />-->
+	<!-- scripts to include -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/owl.carousel.js"></script>
+    <script src="./js/jquery.fitvids.js"></script>
+    <script src="./js/jquery.colorbox.js"></script>
+    <script src="./js/jquery.isotope.js"></script>
+    <script src="./js/jquery.sidr.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/application.js"></script>
+    <script src="./js/prettify.js"></script>
+</head>
+
+<body style="">
+
+<!--Navbar-->
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+	<div class="navbar-header" style="">
+	  <!--<button class="navbar-toggle" type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>-->
+	  <div class="logo-header">
+		<a class="navbar-brand logo" href="http://developer.nvidia.com/gameworks"><img alt="NVidia Gameworks" height="21" src="./images/developerzone_gameworks_logo.png" usemap="#logo-header" width="245"></a>
+	  </div>
+	</div>
+  </div>
+</nav>
+
+<!-- main body block -->
+<div id="content" class="container">
+
+<div class="row">
+ <div class="col-md-8">
+	<div class="page-header">
+	  <h1>NVIDIA GameWorks Cross-platform Gamepad Library</h1>
+	</div>
+	<p class="lead">
+	Game controller support can be problematic across multiple platforms, especially when spanning desktop and mobile.
+	The <b>NvGamepad</b> library helps solve the problem of implementing cross-platform game controller support.
+	</p>
+	<p>
+	Both Windows and Android provide C-code APIs for game controllers, but they tend to be very different, even at the architectural level.
+	As a result, many games moving from desktop to mobile may be tempted not to bring over their existing gamepad support.
+	With the growing number of Android-based gaming systems such as <a href="http://shield.nvidia.com/">NVIDIA SHIELD</a> and
+	other gaming handhelds and micro-consoles, gamepad support on mobile is an increasingly important differentiator.
+	</p>
+  <p>
+    <b>NvGamepad</b> is a simple C++ library that provides an application developer with a cross-platform gamepad-reading (buttons and axes) class
+    and multiple implementation classes.  The implementation classes (one for each supported platform) are designed to be easy to integrate into
+    the particular user-input handling idiom of that platform.  The code consuming the gamepad events sees and knows nothing of the platform implementation.
+  </p>
+  <p>
+    The library is designed to be integrated, modified and expanded by developers as they see the need.  The full source code of the library is
+    available, and NVIDIA's own cross-platform OpenGL Graphics and Compute Samples use the class for input handling.
+  </p>
+
+	<h3>Table of Contents</h3>
+	<ul>
+		<li><a href="gp_prereq.htm">Prerequisites</a></li>
+		<li><a href="gp_setup.htm">Setup Guide</a></li>
+		<li><a href="gp_sample.htm">NvGamepad Sample</a></li>
+		<li><a href="doxygen/html/annotated.html">NvGamepad API reference</a></li>
+	</ul>
+ </div> <!--col-md-8-->
+ <div class="col-md-4"></div>
+</div> <!--row-->
+
+</div> <!--content-->
+<!-- footer block-->
+<div id="footer" class="container">
+	<div class="seperator"></div>
+	<div class="seperator"></div>
+	<footer>
+		<div class="row">
+			<div class="text-center">&copy;2014 NVIDIA Corporation.</div>
+			<div class="seperator"></div>
+		</div>
+	</footer>
+</div> <!--footer-->
+
+</body>
+</html>

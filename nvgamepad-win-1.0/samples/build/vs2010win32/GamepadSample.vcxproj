@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="debug|Win32">
+			<Configuration>debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="release|Win32">
+			<Configuration>release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<GenerateManifest>false</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<GenerateManifest>false</GenerateManifest>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Label="ExtensionSettings">
+	</ImportGroup>
+	<ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+	</ImportGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">
+		<OutDir>./../../bin/vs2010x86\</OutDir>
+		<IntDir>..\..\../samples/intermediate/GamepadSample/vs2010x86/debug\</IntDir>
+		<TargetExt>.exe</TargetExt>
+		<TargetName>GamepadSampleD</TargetName>
+		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+		<CodeAnalysisRules />
+		<CodeAnalysisRuleAssemblies />
+		<SkipCopyingSymbolsToOutputDirectory>true</SkipCopyingSymbolsToOutputDirectory>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='debug|Win32'">
+		<ClCompile>
+			<TreatWarningAsError>true</TreatWarningAsError>
+			<CallingConvention>Cdecl</CallingConvention>
+			<IntrinsicFunctions>true</IntrinsicFunctions>
+			<SuppressStartupBanner>true</SuppressStartupBanner>
+			<FloatingPointModel>Fast</FloatingPointModel>
+			<AdditionalOptions>/W4 /Oy- /Gm- /EHsc /wd4995 /wd4390 /wd4100 /wd4201 /wd4206</AdditionalOptions>
+			<Optimization>Disabled</Optimization>
+			<AdditionalIncludeDirectories>./../../GamepadSample;./../../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;PROFILE;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<WarningLevel>Level3</WarningLevel>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PrecompiledHeaderFile></PrecompiledHeaderFile>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+		</ClCompile>
+		<Link>
+			<AdditionalOptions>/DEBUG /MACHINE:x86 /LARGEADDRESSAWARE /NOLOGO /OPT:REF /OPT:ICF /INCREMENTAL:NO</AdditionalOptions>
+			<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)GamepadSampleD.exe</OutputFile>
+			<AdditionalLibraryDirectories>./../../../lib/vs2010x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<ProgramDatabaseFile>$(OutDir)/GamepadSampleD.exe.pdb</ProgramDatabaseFile>
+			<GenerateMapFile>true</GenerateMapFile>
+			<MapFileName>$(OutDir)/GamepadSampleD.exe.map</MapFileName>
+			<SubSystem>Windows</SubSystem>
+			<ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+		<ResourceCompile>
+		</ResourceCompile>
+		<ProjectReference>
+		</ProjectReference>
+	</ItemDefinitionGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|Win32'">
+		<OutDir>./../../bin/vs2010x86\</OutDir>
+		<IntDir>..\..\../samples/intermediate/GamepadSample/vs2010x86/release\</IntDir>
+		<TargetExt>.exe</TargetExt>
+		<TargetName>GamepadSample</TargetName>
+		<CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+		<CodeAnalysisRules />
+		<CodeAnalysisRuleAssemblies />
+		<SkipCopyingSymbolsToOutputDirectory>true</SkipCopyingSymbolsToOutputDirectory>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|Win32'">
+		<ClCompile>
+			<TreatWarningAsError>true</TreatWarningAsError>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+			<IntrinsicFunctions>true</IntrinsicFunctions>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<SuppressStartupBanner>true</SuppressStartupBanner>
+			<FloatingPointModel>Fast</FloatingPointModel>
+			<AdditionalOptions>/W4 /Oy- /Gm- /EHsc /wd4995 /wd4390 /wd4100 /wd4201 /wd4206</AdditionalOptions>
+			<Optimization>MaxSpeed</Optimization>
+			<AdditionalIncludeDirectories>./../../GamepadSample;./../../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<WarningLevel>Level3</WarningLevel>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PrecompiledHeaderFile></PrecompiledHeaderFile>
+			<DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+		</ClCompile>
+		<Link>
+			<AdditionalOptions>/DEBUG /MACHINE:x86 /LARGEADDRESSAWARE /NOLOGO /OPT:REF /OPT:ICF /INCREMENTAL:NO</AdditionalOptions>
+			<AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;xinput.lib;%(AdditionalDependencies)</AdditionalDependencies>
+			<OutputFile>$(OutDir)GamepadSample.exe</OutputFile>
+			<AdditionalLibraryDirectories>./../../../lib/vs2010x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<ProgramDatabaseFile>$(OutDir)/GamepadSample.exe.pdb</ProgramDatabaseFile>
+			<GenerateMapFile>true</GenerateMapFile>
+			<MapFileName>$(OutDir)/GamepadSample.exe.map</MapFileName>
+			<SubSystem>Windows</SubSystem>
+			<ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+		<ResourceCompile>
+		</ResourceCompile>
+		<ProjectReference>
+		</ProjectReference>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClCompile Include="..\..\GamepadSample\nv_native_app_glue.c">
+		</ClCompile>
+		<ClCompile Include="..\..\GamepadSample\main.cpp">
+		</ClCompile>
+		<ClInclude Include="..\..\GamepadSample\nv_native_app_glue.h">
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="./../../../build/vs2010win32/NvGamepad.vcxproj">
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+		</ProjectReference>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ImportGroup Label="ExtensionTargets"></ImportGroup>
+</Project>

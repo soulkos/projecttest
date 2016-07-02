@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GamepadSample", "GamepadSample.vcxproj", "{1150DAEF-097E-02F6-B343-D3A70C0C4C3A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{73279F07-FECB-C33E-5ACB-FBDD1A77A728} = {73279F07-FECB-C33E-5ACB-FBDD1A77A728}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NvGamepad", "./../../../build/vs2010android/NvGamepad.vcxproj", "{73279F07-FECB-C33E-5ACB-FBDD1A77A728}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug|Tegra-Android = debug|Tegra-Android
+		release|Tegra-Android = release|Tegra-Android
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1150DAEF-097E-02F6-B343-D3A70C0C4C3A}.debug|Tegra-Android.ActiveCfg = debug|Tegra-Android
+		{1150DAEF-097E-02F6-B343-D3A70C0C4C3A}.debug|Tegra-Android.Build.0 = debug|Tegra-Android
+		{1150DAEF-097E-02F6-B343-D3A70C0C4C3A}.release|Tegra-Android.ActiveCfg = release|Tegra-Android
+		{1150DAEF-097E-02F6-B343-D3A70C0C4C3A}.release|Tegra-Android.Build.0 = release|Tegra-Android
+		{73279F07-FECB-C33E-5ACB-FBDD1A77A728}.debug|Tegra-Android.ActiveCfg = debug|Tegra-Android
+		{73279F07-FECB-C33E-5ACB-FBDD1A77A728}.debug|Tegra-Android.Build.0 = debug|Tegra-Android
+		{73279F07-FECB-C33E-5ACB-FBDD1A77A728}.release|Tegra-Android.ActiveCfg = release|Tegra-Android
+		{73279F07-FECB-C33E-5ACB-FBDD1A77A728}.release|Tegra-Android.Build.0 = release|Tegra-Android
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddins) = postSolution
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
