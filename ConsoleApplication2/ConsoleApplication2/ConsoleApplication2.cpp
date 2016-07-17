@@ -2,13 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "Actor.h"
 
-#include <iostream>
-#include <memory>
-#include <cmath>
-#include <vector>
-#include <Windows.h>
 
 
 static float sPlayerOBB[10] = { 0,0,10,10,-10,10,-10,-10,10,-10 };
@@ -72,16 +66,16 @@ int main()
 
 	Act_A.Center.xv = 0;
 	Act_A.Center.yv = 0;
-	Act_A.Speed.xv = 1;
-	Act_A.Speed.yv = 1;
-	Act_A.mass = 1;
+	Act_A.ActorCurrentXYSpeed.xv = 1;
+	Act_A.ActorCurrentXYSpeed.yv = 0;
+	Act_A.ActorMass = 1;
 	Act_A.epsilon = 0.8;
 
-	Act_B.Center.xv = 4;
+	Act_B.Center.xv = 2;
 	Act_B.Center.yv = 0;
-	Act_B.Speed.xv = -1;
-	Act_B.Speed.yv = 1;
-	Act_B.mass = 1;
+	Act_B.ActorCurrentXYSpeed.xv = 0;
+	Act_B.ActorCurrentXYSpeed.yv = 0;
+	Act_B.ActorMass = 1;
 	Act_B.epsilon = 0.8;
 
 
@@ -93,10 +87,10 @@ int main()
 		//for (iteration = 0; iteration < 10;iteration++){
 		//	std::cout << sPlayerOBB[iteration] << "/";
 		//}
-		dxa = Act_A.Speed.xv *0.016;
-		dya = Act_A.Speed.yv *0.016;
-		dxb = Act_B.Speed.xv *0.016;
-		dyb = Act_B.Speed.yv *0.016;
+		dxa = Act_A.ActorCurrentXYSpeed.xv *0.016;
+		dya = Act_A.ActorCurrentXYSpeed.yv *0.016;
+		dxb = Act_B.ActorCurrentXYSpeed.xv *0.016;
+		dyb = Act_B.ActorCurrentXYSpeed.yv *0.016;
 
 		Act_A.Translate(dxa, dya);
 		Act_B.Translate(dxb, dyb);

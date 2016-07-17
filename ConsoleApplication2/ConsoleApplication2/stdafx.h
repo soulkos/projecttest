@@ -11,5 +11,15 @@
 #include <tchar.h>
 
 
+#include <iostream>
+#include <memory>
+#include <cmath>
+#include <vector>
+#include <Windows.h>
+
+#include "Actor.h"
+#include "Vector.h"
+
+
 
 // TODO: faites référence ici aux en-têtes supplémentaires nécessaires au programme
