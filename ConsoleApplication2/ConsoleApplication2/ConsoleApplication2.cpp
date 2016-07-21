@@ -69,14 +69,14 @@ int main()
 	Act_A.ActorCurrentXYSpeed.xv = 1;
 	Act_A.ActorCurrentXYSpeed.yv = 0;
 	Act_A.ActorMass = 1;
-	Act_A.epsilon = 0.8;
+	Act_A.ActorCollisionRestitutionCoefficient = 0.8;
 
 	Act_B.Center.xv = 2;
 	Act_B.Center.yv = 0;
 	Act_B.ActorCurrentXYSpeed.xv = 0;
 	Act_B.ActorCurrentXYSpeed.yv = 0;
 	Act_B.ActorMass = 1;
-	Act_B.epsilon = 0.8;
+	Act_B.ActorCollisionRestitutionCoefficient = 0.8;
 
 
 	while (1) {
@@ -107,7 +107,7 @@ int main()
 
 			col_pts.xv = Act_A.Center.xv;
 			col_pts.yv = Act_B.Center.yv;
-			Act_A.collision_responce(Act_B, col_pts);
+			Act_A.DynamicDynamicCollisionResponce(Act_B, col_pts);
 		}
 		Sleep(DWORD(500));
 		//t += 0.01;

@@ -7,7 +7,7 @@ class CActor
 public:
 	CVector ActorCurrentXYSpeed;
 	CVector Center;
-	float ActorMass,epsilon, ActorCurrentSpinSpeed,ActorInitialVerticalSpeed, ActorInitialSpinSpeed;
+	float ActorMass,ActorCollisionRestitutionCoefficient, ActorCurrentSpinSpeed,ActorInitialVerticalSpeed, ActorInitialSpinSpeed;
 	// physics constants
 	double sTimeConstant = 0.016;
 	bool JumpFlag,SpinFlag, SlamFlag, DoubleJumpFlag, DoubleJumpRequestFlag;
@@ -17,7 +17,8 @@ public:
 	CActor();
 	~CActor();
 
-	void collision_responce(CActor &, CVector);
+	void DynamicDynamicCollisionResponce(CActor &, CVector);
+	void StaticDynamicCollisionResponce(CActor, CVector CollisionCenter);
 	CVector AirEvolution(CVector);
 	float SpinEvolution(void);
 	void Translate(float, float);

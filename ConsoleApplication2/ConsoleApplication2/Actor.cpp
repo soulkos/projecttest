@@ -6,9 +6,10 @@ CActor::CActor()
 {
 
 	ActorCurrentSpinSpeed = 0;
-	epsilon = 0;
+	ActorCollisionRestitutionCoefficient = 0;
 	ActorMass = 0;
 	ActorInitialVerticalSpeed = 0;
+	ActorInitialSpinSpeed = 0;
 	JumpEvolutionTracer = 0;
 	JumpFlag = false;
 	DoubleJumpFlag = false;
@@ -26,9 +27,9 @@ CActor::~CActor()
 {
 }
 
-void CActor::collision_responce(CActor & B, CVector CollisionCenter)
+void CActor::DynamicDynamicCollisionResponce(CActor & B, CVector CollisionCenter)
 {
-	float LocEpsi = (epsilon + B.epsilon) / 2.0;
+	float LocEpsi = (ActorCollisionRestitutionCoefficient + B.ActorCollisionRestitutionCoefficient) / 2.0;
 	float AXTemp, AYTemp;
 	// Calculating Actor A speed after collision
 	AXTemp = ((ActorMass*ActorCurrentXYSpeed.xv + B.ActorMass*B.ActorCurrentXYSpeed.xv) + (LocEpsi*B.ActorMass*(B.ActorCurrentXYSpeed.xv - ActorCurrentXYSpeed.xv))) / (ActorMass + B.ActorMass);
@@ -42,8 +43,53 @@ void CActor::collision_responce(CActor & B, CVector CollisionCenter)
 
 	//Calculating resulting rotation speed inducted by collision on actor A
 	ActorCurrentSpinSpeed = 1;
-	//Calculating resulting rotation speed inducted by collision on actor A
+	//Calculating resulting rotation speed inducted by collision on actor B
 	B.ActorCurrentSpinSpeed = 1;
+}
+
+void CActor::StaticDynamicCollisionResponce(CActor B, CVector CollisionCenter)
+{
+	float LocEpsi = (ActorCollisionRestitutionCoefficient + B.ActorCollisionRestitutionCoefficient) / 2.0;
+	float AXTemp, AYTemp;
+	int NormalVectorOrientation = 0 ; 
+	// Calculate normal vector to collision center regarding Bactor boundary
+
+		// SLK: waiting vector definitive object
+
+	// Get angular of normal vector compare to XOY 
+	
+		// SLK: waiting vector definitive object
+
+	// Calculate speed modification on collision
+	AXTemp = ((ActorMass*ActorCurrentXYSpeed.xv  ) - (LocEpsi*B.ActorMass*(ActorCurrentXYSpeed.xv))) / (ActorMass + B.ActorMass);
+	AYTemp = ((ActorMass*ActorCurrentXYSpeed.yv  ) - (LocEpsi*B.ActorMass*(ActorCurrentXYSpeed.yv))) / (ActorMass + B.ActorMass);
+
+	// Attribute the correct orientation to the speed vector
+
+	switch (NormalVectorOrientation)
+	{
+		case 1: // X = -X && Y = Y
+			ActorCurrentXYSpeed.xv = -AXTemp;
+			ActorCurrentXYSpeed.yv = AYTemp;
+			break;
+		case 2 : //X = -Y && Y = -X
+			ActorCurrentXYSpeed.xv = -AYTemp;
+			ActorCurrentXYSpeed.yv = -AXTemp;
+			break;
+		case 3: // X = X && Y = -Y
+			ActorCurrentXYSpeed.xv = AXTemp; 
+			ActorCurrentXYSpeed.yv = -AYTemp;
+			break;
+		case 4: // X = Y && Y = X
+			ActorCurrentXYSpeed.xv = AYTemp;
+			ActorCurrentXYSpeed.yv = AXTemp;
+			break;
+		default:
+			// no speed change
+				break;
+	}
+		
+
 }
 void CActor::Translate(float dx, float dy)
 {
@@ -75,7 +121,7 @@ CVector CActor::AirEvolution(CVector ActorLocalGravity)
 
 
 		// Calculating Actor deltaX coordinate
-		DeltaActorCoordinate.xv += ActorLocalGravity.xv*ActorMass ;// + ActorControllerXMouvement 
+		DeltaActorCoordinate.xv = sTimeConstant*ActorLocalGravity.xv*ActorMass ;// + ActorControllerXMouvement 
 		// Calculating Actor deltaY coordinate
 		DeltaActorCoordinate.yv = float(10.0 * (sTimeConstant*((ActorCurrentXYSpeed.yv*ActorLocalGravity.yv*ActorMass) - (ActorLocalGravity.yv*ActorMass)))); // Calculating Player deltaY coordinate 
 		
@@ -87,6 +133,7 @@ CVector CActor::AirEvolution(CVector ActorLocalGravity)
 
 
 	return DeltaActorCoordinate;
+
 }
 float CActor::SpinEvolution(void)
 {
